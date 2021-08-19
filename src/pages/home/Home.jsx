@@ -9,11 +9,11 @@ const Home = () => {
     <div className="home">
       <Navbar />
       <Featured />
-      <List />
-      <List />
-      <List />
-      <List />
-      <List />
+      <List title="Actions" />
+      <List title="Drama" />
+      <List title="Horror" />
+      <List title="Adeventure" />
+      <List title="Documentary" />
     </div>
   );
 };

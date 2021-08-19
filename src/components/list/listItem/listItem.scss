@@ -5,8 +5,10 @@
   color: #fff;
   margin-right: 30px;
   overflow: hidden;
+  position: relative;
+  border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
   img {
     width: 100%;
@@ -15,13 +17,64 @@
   }
 
   &:hover {
-    width: 325px;
-    height: 300px;
-    -webkit-box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.527);
-    box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.527);
+    width: 400px;
+    height: 400px;
+    -webkit-box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.17);
+    box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.17);
 
     img {
-      height: 170px;
+      height: 260px;
+    }
+  }
+
+  video {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .itemInfo {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    .icons {
+      display: flex;
+      margin-bottom: 10px;
+
+      .icon {
+        border: 2px solid #fff;
+        padding: 5px;
+        border-radius: 50%;
+        margin-right: 10px;
+        font-size: 16px;
+      }
+    }
+    .itemInfoTop {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      color: grey;
+      .limit {
+        border: 1px solid grey;
+        padding: 1px 3px;
+        margin: 0 10px;
+      }
+    }
+
+    .desc {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .genre {
+      font-size: 14px;
+      color: lightgray;
     }
   }
 }

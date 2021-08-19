@@ -6,7 +6,7 @@ import ListItem from "./listItem/ListItem";
 import { useRef, useState } from "react";
 import "./list.scss";
 
-const List = () => {
+const List = ({ title }) => {
   const [isMoved, setIsMoved] = useState(false);
   const [slideNumber, setSlideNumber] = useState(0);
   const listRef = useRef();
@@ -17,14 +17,14 @@ const List = () => {
       setSlideNumber(slideNumber - 1);
       listRef.current.style.transform = `translateX(${255 + distance}px)`;
     }
-    if (direction === "right" && slideNumber < 4) {
+    if (direction === "right" && slideNumber < 3) {
       setSlideNumber(slideNumber + 1);
       listRef.current.style.transform = `translateX(${-255 + distance}px)`;
     }
   };
   return (
     <div className="list">
-      <span className="listTitle">Continue to watch</span>
+      <span className="listTitle">{title}</span>
       <div className="wrapper">
         <ArrowBackIosOutlined
           className="sliderArrow left"
