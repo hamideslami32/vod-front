@@ -2,40 +2,10 @@ import { InfoOutlined, PlayArrow } from "@material-ui/icons";
 import "./featured.scss";
 
 export const Featured = ({ type }) => {
-  // const genrs = [
-  // 	{
-  // 		title:'Adventure',
-  // 	},
-  // 	{
-  // 		title:'Comedy',
-  // 		value
-  // 	},
-  // 	{
-  // 		title:'Crime',
-  // 	},
-  // 	{
-  // 		title:'Fantasy',
-  // 	},
-  // 	{
-  // 		title:'Historical',
-  // 	},
-  // 	{
-  // 		title:'Horror',
-  // 	},
-  // 	{
-  // 		title:'Romance',
-  // 	},
-  // 	{
-  // 		title:'Sci-fi'
-  // 	},
-  // ];
-
+  const heroMovieImage = "https://wallpapercave.com/wp/wp6095970.jpg";
   return (
     <div className="featured">
-      <img
-        width="100%"
-        src="https://cms-assets.theasc.com/Kill-Bill-Featured.jpg?mtime=20200706120040"
-      />
+      <img width="100%" src={heroMovieImage} alt="hero-rosemary-baby" />
       {type && (
         <div className="category">
           <span>{type === "movie" ? "Movies" : "Series"}</span>
@@ -59,10 +29,17 @@ export const Featured = ({ type }) => {
       )}
 
       <div className="info">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqMeHjr3ppSlBC0lnv1bvlJQEFUjkjzxdMRw&usqp=CAU" />
+        <h2>Rosemary's Baby</h2>
+        <div className="main-info">
+          <span>
+            Director: <span>Roman Polanski</span>
+          </span>
+          <span>1968</span>
+        </div>
         <span className="desc">
-          Lorem Lorem lorem Lorem Lorem Lorem lorem Lorem Lorem Lorem lorem
-          Lorem Lorem Lorem lorem Lorem Lorem Lorem lorem Lorem
+          After moving into an apartment with Guy, her husband, Rosemary hears
+          and dreams strange things. When she gets pregnant, she suspects her
+          neighbours have sinister plans for her baby.
         </span>
         <div className="buttons">
           <button className="play">

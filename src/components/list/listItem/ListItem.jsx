@@ -5,26 +5,33 @@ import {
   ThumbUpAltOutlined,
 } from "@material-ui/icons";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import debounce from "lodash/debounce";
 import "./listItem.scss";
 const ListItem = ({ index }) => {
   const [isHovered, setIsHovered] = useState(false);
   const debounced = debounce(() => debounce);
-  const trailer =
-    "https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4";
+  const trailer = "/static/rosemary's baby.mp4";
+  let history = useHistory();
+  const handleClick = () => {
+    history.push("/watch");
+  };
   return (
     <div
-      className="listItem"
+      className={isHovered ? "listItem hovered" : "listItem"}
       onMouseEnter={() => debounced(setIsHovered(true), 500)}
       onMouseLeave={() => debounced(setIsHovered(false), 500)}
     >
-      <img src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" />
+      <img
+        src="https://anotherimg-dazedgroup.netdna-ssl.com/786/azure/another-prod/340/5/345807.jpg"
+        alt=""
+      />
       {isHovered && (
         <>
-          <video src={trailer} autoPlay={true} loop controls />
+          <video src={trailer} autoPlay loop />
           <div className="itemInfo">
             <div className="icons">
-              <PlayArrow className="icon" />
+              <PlayArrow className="icon" onClick={() => handleClick()} />
               <Add className="icon" />
               <ThumbUpAltOutlined className="icon" />
               <ThumbDownAltOutlined className="icon" />

@@ -1,12 +1,13 @@
 import { ArrowBackOutlined } from "@material-ui/icons";
+import { useHistory } from "react-router-dom";
 import "./watch.scss";
 
 const Watch = () => {
-  const movieUrl =
-    "https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4";
+  const history = useHistory();
+  const movieUrl = "/static/rosemary's baby.mp4";
   return (
     <div className="watch">
-      <div className="back">
+      <div className="back" onClick={() => history.push("/")}>
         <ArrowBackOutlined />
         <span>Home</span>
       </div>

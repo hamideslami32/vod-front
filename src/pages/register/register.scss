@@ -1,0 +1,85 @@
+.register {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://store-images.s-microsoft.com/image/apps.22805.14495311847124170.6bb0e308-d660-48ed-bc80-64283f86c66f.71854e62-1a96-40c0-b931-17e1dcf99bcb?mode=scale&q=90&h=1080&w=1920");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .top {
+    .wrapper {
+      padding: 20px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+        height: 40px;
+      }
+
+      .loginButton {
+        background-color: red;
+        color: white;
+        border: none;
+        font-size: 16px;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+
+    h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .input {
+      width: 50%;
+      height: 70px;
+      display: flex;
+      border-radius: 5px;
+      justify-content: space-between;
+
+      input {
+        border-radius: 5px 0 0 5px;
+        border: none;
+        flex: 4;
+        padding: 5px 10px;
+        font-size: 16px;
+        outline: none;
+      }
+
+      .registerButton {
+        border-radius: 0 5px 5px 0;
+        flex: 1;
+        background-color: red;
+        color: white;
+        font-size: 20px;
+        border: none;
+        font-weight: 700;
+      }
+    }
+  }
+}
