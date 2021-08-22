@@ -4,7 +4,7 @@ import "./watch.scss";
 
 const Watch = () => {
   const history = useHistory();
-  const movieUrl = "/static/rosemary's baby.mp4";
+  const movieUrl = "/static/kill-bill-vol-1.mp4";
   return (
     <div className="watch">
       <div className="back" onClick={() => history.push("/")}>

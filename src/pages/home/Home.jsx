@@ -4,11 +4,11 @@ import List from "../../components/list/List";
 
 import "./home.scss";
 
-const Home = () => {
+const Home = ({ type }) => {
   return (
     <div className="home">
       <Navbar />
-      <Featured />
+      <Featured type={type} />
       <List className="list" title="Actions" />
       <List className="list" title="Drama" />
       <List className="list" title="Horror" />

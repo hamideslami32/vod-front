@@ -10,10 +10,30 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/watch" component={Watch} />
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/series">
+          <Home type="series" />
+        </Route>
+        <Route path="/movies">
+          <Home type="movies" />
+        </Route>
+        {/* <Route exact path="/login">
+          <Login />
+        </Route>
+        <Route exact path="/login">
+          <Login />
+        </Route> */}
+        <Route exact path="/watch">
+          <Watch />
+        </Route>
+        <Route exact path="/register">
+          <Register />
+        </Route>
+        <Route exact path="/login">
+          <Login />
+        </Route>
       </Switch>
     </Router>
   );

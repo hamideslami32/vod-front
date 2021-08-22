@@ -11,7 +11,7 @@ import "./listItem.scss";
 const ListItem = ({ index }) => {
   const [isHovered, setIsHovered] = useState(false);
   const debounced = debounce(() => debounce);
-  const trailer = "/static/rosemary's baby.mp4";
+  const trailer = "/static/kill-bill-vol-1.mp4";
   let history = useHistory();
   const handleClick = () => {
     history.push("/watch");
@@ -23,7 +23,7 @@ const ListItem = ({ index }) => {
       onMouseLeave={() => debounced(setIsHovered(false), 500)}
     >
       <img
-        src="https://anotherimg-dazedgroup.netdna-ssl.com/786/azure/another-prod/340/5/345807.jpg"
+        src="https://occ-0-1068-1722.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABfAAjrP5uckwksCYLqecuoVvq9Xo4aHEWFxwcEwHspArBHZDqqyHiE4AA2oz2lOS59CxyVj3UWiPjly68QHei-koscSe.jpg?r=c0b"
         alt=""
       />
       {isHovered && (

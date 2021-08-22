@@ -27,7 +27,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    // filter: brightness(0.2);
   }
 
   .info {
@@ -49,13 +48,13 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       width: 50%;
       margin-top: 10px;
-      color: lightgreen;
+      color: lightsalmon;
       font-weight: 500;
       display: flex;
       justify-content: space-between;
 
       & > span > span {
-        color: black;
+        color: lightgray;
       }
     }
 
@@ -91,7 +90,7 @@
         color: var(--main-color);
       }
       .more {
-        background-color: lightgreen;
+        background-color: lightsalmon;
         color: var(--main-color);
       }
     }
