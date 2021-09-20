@@ -1,10 +1,30 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import { InfoOutlined, PlayArrow } from "@material-ui/icons";
 import "./featured.scss";
 
 export const Featured = ({ type }) => {
-  const heroMovieImage =
-    "https://cutewallpaper.org/21/kill-bill-background/Kill-Bill-Vol.-2-Movie-fanart-fanart.tv.jpg";
+  const [content, setContent] = useState({});
+
+  useEffect(() => {
+    const getRandomContent = async () => {
+      try {
+        const res = axios.get(`/movies/random?type=${type}`, {
+          headers: {
+            token:
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjAwNzE5MGY5MGU4ZTVhOGVlNDljNSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzMjE3MDc2MiwiZXhwIjoxNjMyNjAyNzYyfQ.FkIqj3wTfRBCIY2x9EDSaJoOIlH4gYW4NzBW6MLzzyo",
+          },
+        });
+        console.log({ res });
+        setContent(res.data[0]);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getRandomContent();
+  }, [type]);
+  const heroMovieImage = "/static/kill-bill-vol-2.jpg";
   return (
     <div className="featured">
       <img width="100%" src={heroMovieImage} alt="hero-rosemary-baby" />
