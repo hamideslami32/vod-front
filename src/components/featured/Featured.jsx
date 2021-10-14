@@ -10,12 +10,7 @@ export const Featured = ({ type }) => {
   useEffect(() => {
     const getRandomContent = async () => {
       try {
-        const res = axios.get(`/movies/random?type=${type}`, {
-          headers: {
-            token:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjAwNzE5MGY5MGU4ZTVhOGVlNDljNSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzMjE3MDc2MiwiZXhwIjoxNjMyNjAyNzYyfQ.FkIqj3wTfRBCIY2x9EDSaJoOIlH4gYW4NzBW6MLzzyo",
-          },
-        });
+        const res = axios.get(`/movies/random?type=${type}`);
         console.log({ res });
         setContent(res.data[0]);
       } catch (error) {
